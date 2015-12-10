@@ -17,19 +17,24 @@ class DetailViewController: UITableViewController, MWFeedParserDelegate {
     let synth = AVSpeechSynthesizer()
     var myUtterance = AVSpeechUtterance(string: "")
     
-    func playButtonPressed(itemId:Int) {
-        if playing {
+    func playButtonPressed(itemId:Int, cell:UITableViewCell) {
+        let playImg = cell.viewWithTag(13) as! UIImageView
+        if playing == false {
             playing = true
-            //playButton.imageView?.image = UIImage(named: "Pause")
+            playImg.image = UIImage(named: "Pause")
             let item = self.items[itemId] as MWFeedItem
             let text = item.title+":"+item.summary
             myUtterance = AVSpeechUtterance(string: text)
-            myUtterance.rate = 0.3
+            myUtterance.rate = 0.5
             synth.speakUtterance(myUtterance)
+            print(text)
         } else {
             playing = false
-            //playButton.imageView?.image = UIImage(named: "Play")
-            //pause the playing
+             playImg.image = UIImage(named: "Play")
+            synth.stopSpeakingAtBoundary(AVSpeechBoundary.Immediate)
+            myUtterance = AVSpeechUtterance(string: "")
+            synth.speakUtterance(myUtterance)
+            print("stop the speaking")
         }
         
     }
@@ -135,8 +140,7 @@ class DetailViewController: UITableViewController, MWFeedParserDelegate {
         let cell = tableView.cellForRowAtIndexPath(indexPath)
         
         if cell != nil {
-            playButtonPressed(indexPath.row)
-            
+            playButtonPressed(indexPath.row, cell:cell!)
         }
     }
 
