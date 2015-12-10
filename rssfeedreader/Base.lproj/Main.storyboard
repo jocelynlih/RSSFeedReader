@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rS3-R9-Ivy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rS3-R9-Ivy">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -27,20 +28,20 @@
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="mLL-gJ-YKr">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="2pz-XF-uhl" style="IBUITableViewCellStyleDefault" id="m0d-ak-lc9">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="113.5" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="m0d-ak-lc9" id="d3P-M7-ByW">
-                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2pz-XF-uhl">
-                                            <rect key="frame" x="15" y="0.0" width="270" height="43"/>
+                                            <rect key="frame" x="15" y="0.0" width="550" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
                                     </subviews>
@@ -76,27 +77,35 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </activityIndicatorView>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="DCell" rowHeight="80" id="csZ-Tj-Pb1">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="DCell" rowHeight="80" id="csZ-Tj-Pb1">
+                                <rect key="frame" x="0.0" y="86" width="600" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="csZ-Tj-Pb1" id="9Nn-mp-6f9">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" tag="10" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default" translatesAutoresizingMaskIntoConstraints="NO" id="LDi-ei-X9G">
                                             <rect key="frame" x="0.0" y="2" width="80" height="70"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="12" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developers Start Designing Apps for Apple Watch" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="mxz-fn-zdc">
-                                            <rect key="frame" x="93" y="38" width="499" height="36"/>
+                                            <rect key="frame" x="93" y="38" width="459" height="31.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="11" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developers Start Designing Apps for Apple Watch" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wNR-ZP-Z55">
-                                            <rect key="frame" x="93" y="8" width="499" height="22"/>
+                                            <rect key="frame" x="93" y="8" width="459" height="21.5"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Play" translatesAutoresizingMaskIntoConstraints="NO" id="AvC-L8-maQ">
+                                            <rect key="frame" x="562" y="26" width="26" height="26"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="26" id="AEE-x6-3E0"/>
+                                                <constraint firstAttribute="height" constant="26" id="UMd-2S-cvz"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="mxz-fn-zdc" firstAttribute="top" secondItem="wNR-ZP-Z55" secondAttribute="bottom" constant="8" id="14C-4o-C0D"/>
@@ -104,20 +113,22 @@
                                         <constraint firstItem="LDi-ei-X9G" firstAttribute="top" secondItem="9Nn-mp-6f9" secondAttribute="topMargin" constant="-6" id="9rb-gC-F0A"/>
                                         <constraint firstItem="wNR-ZP-Z55" firstAttribute="leading" secondItem="LDi-ei-X9G" secondAttribute="trailing" constant="13" id="Abt-ak-7zJ"/>
                                         <constraint firstItem="mxz-fn-zdc" firstAttribute="leading" secondItem="9Nn-mp-6f9" secondAttribute="leadingMargin" constant="85" id="EHR-iL-Bbc"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="mxz-fn-zdc" secondAttribute="trailing" id="GB5-bI-fEB"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="mxz-fn-zdc" secondAttribute="trailing" constant="40" id="GB5-bI-fEB"/>
                                         <constraint firstAttribute="centerY" secondItem="LDi-ei-X9G" secondAttribute="centerY" constant="2" id="K6q-IA-7T6"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="AvC-L8-maQ" secondAttribute="trailing" constant="4" id="M1U-WU-d7t"/>
                                         <constraint firstItem="wNR-ZP-Z55" firstAttribute="leading" secondItem="9Nn-mp-6f9" secondAttribute="leadingMargin" constant="85" id="UBf-nC-uNB"/>
                                         <constraint firstItem="mxz-fn-zdc" firstAttribute="top" secondItem="wNR-ZP-Z55" secondAttribute="bottom" constant="8.5" id="cNc-s0-taa"/>
                                         <constraint firstItem="LDi-ei-X9G" firstAttribute="top" secondItem="9Nn-mp-6f9" secondAttribute="topMargin" constant="-8" id="d0E-CJ-l09"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="mxz-fn-zdc" secondAttribute="bottom" constant="-2" id="fJy-BQ-kK8"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="mxz-fn-zdc" secondAttribute="bottom" constant="2" id="fJy-BQ-kK8"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="LDi-ei-X9G" secondAttribute="bottom" id="fyb-ZV-naq"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="LDi-ei-X9G" secondAttribute="bottom" constant="-2" id="iAf-dO-KFO"/>
+                                        <constraint firstItem="AvC-L8-maQ" firstAttribute="top" secondItem="9Nn-mp-6f9" secondAttribute="topMargin" constant="18" id="iER-fM-0d9"/>
                                         <constraint firstItem="wNR-ZP-Z55" firstAttribute="top" secondItem="9Nn-mp-6f9" secondAttribute="topMargin" id="raS-eM-aSO"/>
                                         <constraint firstItem="mxz-fn-zdc" firstAttribute="leading" secondItem="9Nn-mp-6f9" secondAttribute="leadingMargin" constant="77" id="s0Y-3r-h0e"/>
                                         <constraint firstAttribute="centerY" secondItem="LDi-ei-X9G" secondAttribute="centerY" constant="2" id="uLB-xD-YWD"/>
                                         <constraint firstItem="mxz-fn-zdc" firstAttribute="top" secondItem="9Nn-mp-6f9" secondAttribute="topMargin" constant="30" id="uOl-1F-1u4"/>
                                         <constraint firstItem="LDi-ei-X9G" firstAttribute="top" secondItem="9Nn-mp-6f9" secondAttribute="top" id="yR4-nL-EUh"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="wNR-ZP-Z55" secondAttribute="trailing" id="ysI-Mg-diV"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="wNR-ZP-Z55" secondAttribute="trailing" constant="40" id="ysI-Mg-diV"/>
                                         <constraint firstItem="mxz-fn-zdc" firstAttribute="leading" secondItem="LDi-ei-X9G" secondAttribute="trailing" constant="13" id="zVS-60-fvN"/>
                                     </constraints>
                                     <variation key="default">
@@ -151,6 +162,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Play" width="22" height="23"/>
         <image name="default" width="80" height="80"/>
     </resources>
 </document>

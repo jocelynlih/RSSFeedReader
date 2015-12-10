@@ -7,13 +7,32 @@
 //
 
 import UIKit
-
+import AVFoundation
 class DetailViewController: UITableViewController, MWFeedParserDelegate {
     
     @IBOutlet var spinner: UIActivityIndicatorView!
     var rssURL: NSString!
     var items = [MWFeedItem]()
-
+    var playing = false
+    let synth = AVSpeechSynthesizer()
+    var myUtterance = AVSpeechUtterance(string: "")
+    
+    func playButtonPressed(itemId:Int) {
+        if playing {
+            playing = true
+            //playButton.imageView?.image = UIImage(named: "Pause")
+            let item = self.items[itemId] as MWFeedItem
+            let text = item.title+":"+item.summary
+            myUtterance = AVSpeechUtterance(string: text)
+            myUtterance.rate = 0.3
+            synth.speakUtterance(myUtterance)
+        } else {
+            playing = false
+            //playButton.imageView?.image = UIImage(named: "Play")
+            //pause the playing
+        }
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         //add the refresh control 
@@ -109,6 +128,15 @@ class DetailViewController: UITableViewController, MWFeedParserDelegate {
                     }
                 });
             })
+        }
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let cell = tableView.cellForRowAtIndexPath(indexPath)
+        
+        if cell != nil {
+            playButtonPressed(indexPath.row)
+            
         }
     }
 

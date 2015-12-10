@@ -10,8 +10,8 @@ import UIKit
 
 class MasterViewController: UITableViewController, UITextFieldDelegate {
 
-    var objects : NSArray = ["CNNWorld", "CNN", "CNNMoney", "BBC", "PCWorld"]
-    var urls : NSMutableArray = ["http://rss.cnn.com/rss/cnn_world.rss", "http://rss.cnn.com/rss/cnn_topstories.rss", "http://rss.cnn.com/rss/money_latest.rss", "http://newsrss.bbc.co.uk/rss/newsonline_world_edition/americas/rss.xml", "feed://www.pcworld.com/index.rss"]
+    var objects : NSArray = ["BBC", "CNNWorld", "CNN", "CNNMoney", "PCWorld"]
+    var urls : NSMutableArray = ["http://newsrss.bbc.co.uk/rss/newsonline_world_edition/americas/rss.xml", "http://rss.cnn.com/rss/cnn_world.rss", "http://rss.cnn.com/rss/cnn_topstories.rss", "http://rss.cnn.com/rss/money_latest.rss", "feed://www.pcworld.com/index.rss"]
     var customInput : NSString = "http://rss.cnn.com/rss/cnn_topstories.rss"
     override func awakeFromNib() {
         super.awakeFromNib()
