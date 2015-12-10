@@ -10,16 +10,7 @@ PODS:
   - MWFeedParser/NSString+HTML (1.0.1)
 
 DEPENDENCIES:
-  - MWFeedParser (from `https://github.com/jocelynlih/MWFeedParser`)
-
-EXTERNAL SOURCES:
-  MWFeedParser:
-    :git: https://github.com/jocelynlih/MWFeedParser
-
-CHECKOUT OPTIONS:
-  MWFeedParser:
-    :commit: c92cb358d717795c96af4a4734a56775513e0338
-    :git: https://github.com/jocelynlih/MWFeedParser
+  - MWFeedParser
 
 SPEC CHECKSUMS:
   MWFeedParser: 2cf646014c1baf6ad1b08c480b40a08180079247
