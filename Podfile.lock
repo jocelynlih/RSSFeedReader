@@ -1,8 +1,8 @@
 PODS:
   - MWFeedParser (1.0.1):
-    - MWFeedParser/FeedParser
-    - MWFeedParser/NSDate+InternetDateTime
-    - MWFeedParser/NSString+HTML
+    - MWFeedParser/FeedParser (= 1.0.1)
+    - MWFeedParser/NSDate+InternetDateTime (= 1.0.1)
+    - MWFeedParser/NSString+HTML (= 1.0.1)
   - MWFeedParser/FeedParser (1.0.1):
     - MWFeedParser/NSDate+InternetDateTime
     - MWFeedParser/NSString+HTML
@@ -16,7 +16,12 @@ EXTERNAL SOURCES:
   MWFeedParser:
     :git: https://github.com/jocelynlih/MWFeedParser
 
-SPEC CHECKSUMS:
-  MWFeedParser: c747d7e43ad365a7f18e84924496665944228e86
+CHECKOUT OPTIONS:
+  MWFeedParser:
+    :commit: c92cb358d717795c96af4a4734a56775513e0338
+    :git: https://github.com/jocelynlih/MWFeedParser
 
-COCOAPODS: 0.34.1
+SPEC CHECKSUMS:
+  MWFeedParser: 2cf646014c1baf6ad1b08c480b40a08180079247
+
+COCOAPODS: 0.39.0

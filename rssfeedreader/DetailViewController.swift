@@ -32,7 +32,7 @@ class DetailViewController: UITableViewController, MWFeedParserDelegate {
     }
 
     func fetchRequest() {
-        let URL = NSURL(string: self.rssURL)
+        let URL = NSURL(string: self.rssURL as String)
         let rssParser = MWFeedParser(feedURL: URL)
         rssParser.delegate = self
         rssParser.parse()
@@ -87,10 +87,10 @@ class DetailViewController: UITableViewController, MWFeedParserDelegate {
 
     func configureCell(cell: UITableViewCell, atIndexPath indexPath: NSIndexPath) {
         let item = self.items[indexPath.row] as MWFeedItem
-        let titleLabel = cell.viewWithTag(11) as UILabel
+        let titleLabel = cell.viewWithTag(11) as! UILabel
         titleLabel.text = item.title
         
-        let detailLabel = cell.viewWithTag(12) as UILabel
+        let detailLabel = cell.viewWithTag(12) as! UILabel
         detailLabel.text = item.summary
         
         let projectURL = item.link.componentsSeparatedByString("?")[0]
@@ -100,7 +100,7 @@ class DetailViewController: UITableViewController, MWFeedParserDelegate {
         }
         let imgURL: NSURL? = NSURL(string: item.imageURL)
         if imgURL != nil {
-            let thumbnailImg = cell.viewWithTag(10) as UIImageView
+            let thumbnailImg = cell.viewWithTag(10) as! UIImageView
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), {
                 let imageData = NSData(contentsOfURL:imgURL!)
                 dispatch_async(dispatch_get_main_queue(), {

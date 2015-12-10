@@ -28,12 +28,12 @@ class MasterViewController: UITableViewController, UITextFieldDelegate {
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showDetail" {
-            if let indexPath = self.tableView.indexPathForSelectedRow() {
+            if let indexPath = self.tableView.indexPathForSelectedRow {
                 let section = indexPath.section
                 if section == 0 {
-                    (segue.destinationViewController as DetailViewController).rssURL = urls[indexPath.row] as NSString
+                    (segue.destinationViewController as! DetailViewController).rssURL = urls[indexPath.row] as! NSString
                 } else {
-                    (segue.destinationViewController as DetailViewController).rssURL = customInput
+                    (segue.destinationViewController as! DetailViewController).rssURL = customInput
                 }
             }
         }
@@ -56,13 +56,13 @@ class MasterViewController: UITableViewController, UITextFieldDelegate {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
         let section = indexPath.section
         if section == 0 {
-            let object = objects[indexPath.row] as NSString
-            cell.textLabel!.text = object
+            let object = objects[indexPath.row] as! NSString
+            cell.textLabel!.text = object as String
         } else {
             cell.textLabel!.text = ""
             let textField = UITextField(frame: CGRect(x: 0, y: 0, width: cell.contentView.frame.width, height: cell.contentView.frame.height))
             textField.textAlignment = .Center
-            textField.text = "http://rss.cnn.com/rss/cnn_topstories.rss"
+            textField.text = "https://rss.cnn.com/rss/cnn_topstories.rss"
             textField.delegate = self
             cell.contentView.addSubview(textField)
         }
@@ -70,18 +70,18 @@ class MasterViewController: UITableViewController, UITextFieldDelegate {
         return cell
     }
     
-    func textFieldDidBeginEditing(textField: UITextField!) {
+    func textFieldDidBeginEditing(textField: UITextField) {
         
     }
 
     
-    func textFieldShouldEndEditing(textField: UITextField!) -> Bool {
+    func textFieldShouldEndEditing(textField: UITextField) -> Bool {
         return false
     }
     
-    func textFieldShouldReturn(textField: UITextField!) -> Bool {
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        if textField.text.isEmpty {
+        if textField.text!.isEmpty {
             let errorView = UIAlertView()
             errorView.title = "Oops"
             errorView.message = "Please enter your RSS Feed. "
@@ -89,7 +89,7 @@ class MasterViewController: UITableViewController, UITextFieldDelegate {
             errorView.show()
             return false
         }
-        self.customInput = textField.text
+        self.customInput = textField.text!
         return true
     }
 }
